@@ -7,8 +7,11 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Box } from '@mui/material';
 import exampleImage from '../images/example.jpg';
-import { Link } from 'react-router-dom';
-export default function ProductCard(props) {
+import { Link, useParams } from 'react-router-dom';
+
+
+export default function CategoryCard(props) {
+    let params = useParams()
     return (
         <div>
             <Card sx={{ maxWidth: 345, backgroundColor: "#1f1f1f" }} >
@@ -29,7 +32,7 @@ export default function ProductCard(props) {
       <Box sx={{ display: 'flex', justifyContent: 'center'}}>
 
       <CardActions >
-            <Button size="small" variant='contained' component={Link} to={`/proizvodi/${props.name}`} key={props.name}>Vise</Button>
+            <Button size="small" variant='contained' component={Link} to={`/proizvodi/${params.categoryName}/${props.name}`} key={props.name}>Vise</Button>
       </CardActions>
       </Box>
 

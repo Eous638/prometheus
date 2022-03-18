@@ -7,10 +7,12 @@ import FormHelperText from '@mui/material/FormHelperText';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import IconButton from '@mui/material/IconButton';
+import {useParams} from 'react-router-dom'
+
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { Box } from "@mui/material";
 export default function Description() {
-
+  let params = useParams()
     const [age, setAge] = React.useState('');
 
   const handleChange = (event) => {
@@ -19,7 +21,7 @@ export default function Description() {
     return(
         <div style={{padding:20, marginTop:10}}>
             <Typography variant='h3' >
-                Naslov
+            {params.productName}
             </Typography>
             <img src={exampleImage} alt='example' style={{maxHeight:820, width: '80%',  backgroundColor: '#000', objectFit:'contain', marginTop:20}}/>'
 

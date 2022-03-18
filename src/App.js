@@ -5,8 +5,9 @@ import Services from './screens/services';
 import Contact from './screens/contact';
 import Description from './screens/description';
 import ButtonAppBar from './components/bar';
+import Category from './screens/category';
 import { Paper } from '@mui/material';
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Outlet } from "react-router-dom";
 
 function App() {
   return (
@@ -14,7 +15,14 @@ function App() {
       <ButtonAppBar/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/proizvodi" element={<Products/>} />
+        <Route path="/proizvodi" element={<Outlet/>} >
+        <Route path='' element={<Products/>}/>
+          <Route path=':categoryName' element={<Outlet/>}>
+          <Route path='' element={<Category/>}/>
+
+            <Route path=':productName' element={<Description/>}/>
+          </Route>
+          </Route>
         <Route path="/usluge" element={<Services/>} />
         <Route path="/kontakt" element={<Contact/>} />
         <Route path="/proizvod" element={<Description/>} />

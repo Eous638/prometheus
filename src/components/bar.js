@@ -13,7 +13,10 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 export default function ButtonAppBar() {
 
   const [anchorEl2, setAnchorEl2] = React.useState(null);
-
+  const toolbarStyle = {
+    minHeight: '5vh',
+    justifyContent: 'space-between'
+  };
 const drawerClosed = () =>
 {setAnchorEl2(false);}
 
@@ -21,7 +24,7 @@ const drawerOpen = () =>
 {setAnchorEl2(true);}
   return (
       <AppBar position="sticky">
-        <Toolbar sx={{justifyContent: 'space-between'}}>
+        <Toolbar style={toolbarStyle}>
           <IconButton
             size="large"
             edge="start"
@@ -59,7 +62,7 @@ const drawerOpen = () =>
               <Divider />
               <ListItem button component={Link} to="/usluge" onClick={drawerClosed}>
                 <Typography variant="h6" color="white">
-                  Usluge
+                  Narudzbine
                 </Typography>
               </ListItem>
               <Divider />
@@ -74,7 +77,7 @@ const drawerOpen = () =>
             
           </MuiDrawer>
           <Link to="/">
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography variant="h5" component="div" sx={{ flexGrow: 1, padding: 2 }}>
             Prometej
           </Typography>
           </Link>

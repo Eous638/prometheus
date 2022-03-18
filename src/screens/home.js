@@ -17,40 +17,28 @@ export default function Home() {
             </Typography>
             
             <Typography variant="body1" component="div" sx={{ flexGrow: 1, paddingTop: 2, paddingBottom:2  }}>
-        Id et Lorem quis adipisicing id qui excepteur aliqua amet deserunt amet nostrud consequat. Aliquip irure amet culpa eu ea sunt deserunt esse duis enim reprehenderit nostrud aliquip sunt. Duis commodo veniam pariatur adipisicing cupidatat aliqua fugiat do fugiat voluptate. Sint mollit sunt ipsum nostrud aute ex.
-
+                Mi smo tim inzenjera i umetnika iz Beograda koji se trudi da umetnosti da novi oblik koriscenjem tehnologije. Razvili smo nove, moderne metode za lasersko graviranje koje nam omogucavaju da vam pruzimo najbrze i najkvalitetnije proizvode na srpskkomm trzistu!
             
           </Typography>
-          <Button variant="contained" component={Link} to="/proizvodi">Pogledaj proizvode</Button>
           <img src={engraver} alt="engraver" className='banner'/>
           
 
           <Typography paragraph variant="h4" component="div" sx={{ flexGrow: 1, paddingTop: 5 }}>
-                Think of it some other time
+            Sta nudimo?
             </Typography>
             
-            <Typography variant="body1" component="div" sx={{ flexGrow: 1, paddingTop: 2 }}>
-            In cillum pariatur occaecat elit excepteur. Eu occaecat anim qui esse sit in. Magna aliqua labore mollit quis ullamco pariatur dolor veniam sit magna tempor do eu laborum. Aute consequat reprehenderit non non elit non nisi commodo ex. Excepteur est aute fugiat magna cupidatat.
-
-Aute cupidatat velit voluptate reprehenderit ad. Commodo elit eu consectetur occaecat labore nisi. Nostrud culpa dolore in laboris nisi nulla. Amet fugiat sunt magna dolore labore. Sunt enim exercitation cupidatat exercitation cupidatat consectetur ex irure sunt ad aliquip. Laborum proident sint consectetur nisi consectetur eiusmod qui dolor minim nisi aliquip elit laboris anim. Velit aliquip Lorem sint veniam.
-
-Sit ad laboris aliquip labore dolor incididunt dolore ut eiusmod ex nulla esse. Tempor magna officia qui pariatur sint id fugiat adipisicing ipsum aliqua aliqua deserunt tempor ad. Ut enim consequat consectetur deserunt incididunt tempor occaecat laborum do pariatur. Ut aute do cupidatat sunt ea laboris id adipisicing culpa est deserunt tempor.
-            
+            <Typography variant="body1" component="div" sx={{ flexGrow: 1, paddingTop: 2, paddingBottom: 1 }}>
+                U Prometej katalogu imate sirok spektar proizvoda i motiva. Od funkcionalnih proizvoda kao sto su daske za secenje i  podmetaci, pa do dekorativnih slika koje bi ste bili ponosni da okacite na zid. U nasem katalogu imamo motiv za svakoga! Ako ste ljubitelj marvel filmova, pogledajte nesto iz nase kolekcije filmova i serija. Ako ste ljubitelj prirode, retro scena ili cak i animea, na pravom ste mestu. U slucaju da volite prirodne materijale, pogledajte nas asortiman nakita i privezaka!           
           </Typography>
-          <Button variant="contained">Contained</Button>
+          <Button variant="contained" component={Link} to="/proizvodi">Pogledaj proizvode</Button>
           <img src={portrait} alt="engraver" className='banner'/>
           
 
           <Typography paragraph variant="h4" component="div" sx={{ flexGrow: 1, paddingTop: 5 }}>
-                Not today mate
+                Sta ako zelim unikatni proizvod?
             </Typography>
             <Typography variant="body1" component="div" sx={{ flexGrow: 1, paddingTop: 2 }}>
-            Amet esse Lorem irure nulla commodo laborum minim officia do qui. Magna ad eiusmod et irure officia eiusmod voluptate. Aliquip minim duis sunt in. Sint ea dolor culpa ad deserunt ut est sunt.
-
-Quis quis labore officia amet minim id anim minim cillum. Sint non mollit aute occaecat amet elit eiusmod ullamco officia officia. Fugiat incididunt ad esse qui amet amet ex ex minim et. Consectetur id ut veniam fugiat consectetur voluptate mollit exercitation.
-
-Labore consequat minim exercitation amet consequat sunt. Est Lorem quis sunt aliquip eu dolore aute reprehenderit amet cillum fugiat ipsum. Veniam enim ex nostrud officia aliqua commodo est officia. Consectetur fugiat veniam aliquip exercitation nulla consequat ipsum labore culpa. Incididunt culpa quis et consequat reprehenderit culpa id ut magna id.
-            
+                Nikakav problem! Ponosimo se brzom i fleksibilnom uslugom. Ako posedujete biznis i zelite unikatni promotivni materijal, imate kafic i trebaju vam kreativni podmetaci, zelite innovativni poklon, ili samo zelite vecno urezati portret voljene osobe u drvo. Kontaktirajte nas i osiguracemo da dobijete svoj proizvod u sto kracem roku!            
           </Typography>
           <Button variant="contained">Contained</Button>
           <img src={example} alt="engraver" className='banner'/>

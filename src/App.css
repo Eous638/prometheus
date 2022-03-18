@@ -39,9 +39,9 @@
 }
 
 .homeImage {
-  height: 100vh;
+  height: 95vh;
   display:block;
-  width: 90vw;
+  width: 100vw;
   position: relative;
   left: calc(-50vw + 50%);
   object-fit: cover;
