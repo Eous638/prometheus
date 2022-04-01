@@ -20,11 +20,11 @@ export default function Description() {
   };
     return(
         <div style={{padding:20, marginTop:10}}>
+            
+            <img src={exampleImage} alt='example' style={{maxHeight:820, width: '90%',  backgroundColor: '#000', objectFit:'contain', marginTop:0}}/>'
             <Typography variant='h3' >
             {params.productName}
             </Typography>
-            <img src={exampleImage} alt='example' style={{maxHeight:820, width: '80%',  backgroundColor: '#000', objectFit:'contain', marginTop:20}}/>'
-
             <Box sx={{marginBottom:5, flexDirection:'row', alignItems:'center', justifyContent:'center'}}>
 
             <FormControl sx={{ m: 1, minWidth: 120, }} color='primary'>

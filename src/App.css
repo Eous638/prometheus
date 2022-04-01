@@ -88,3 +88,12 @@
   object-fit: none;
   margin-bottom: 30px;
 }
+
+.carousel1 {
+  width: 10%;
+  height: 10%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+  margin-left: 30px;
+}

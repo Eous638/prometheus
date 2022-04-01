@@ -6,6 +6,7 @@ import Contact from './screens/contact';
 import Description from './screens/description';
 import ButtonAppBar from './components/bar';
 import Category from './screens/category';
+import Basket from './screens/basket';
 import { Paper } from '@mui/material';
 import { Routes, Route, Outlet } from "react-router-dom";
 
@@ -19,13 +20,13 @@ function App() {
         <Route path='' element={<Products/>}/>
           <Route path=':categoryName' element={<Outlet/>}>
           <Route path='' element={<Category/>}/>
-
             <Route path=':productName' element={<Description/>}/>
           </Route>
           </Route>
         <Route path="/usluge" element={<Services/>} />
         <Route path="/kontakt" element={<Contact/>} />
         <Route path="/proizvod" element={<Description/>} />
+        <Route path="/korpa" element={<Basket/>} />
       </Routes>
       <Paper variant="outlined" elevation={2} sx={{height:80, backgroundColor:'#171717', marginTop: 10, buttom:0, }}  />
 

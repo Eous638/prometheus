@@ -81,8 +81,8 @@ const drawerOpen = () =>
             Prometej
           </Typography>
           </Link>
-          <IconButton>
-            <ShoppingCartIcon />
+          <IconButton component={Link} to="/korpa">
+            <ShoppingCartIcon  />
           </IconButton>
         </Toolbar>
       </AppBar>
