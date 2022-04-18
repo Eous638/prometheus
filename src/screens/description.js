@@ -8,6 +8,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import IconButton from '@mui/material/IconButton';
 import {useParams} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { Box } from "@mui/material";
@@ -46,7 +47,7 @@ export default function Description() {
         <FormHelperText>Izaberite velicinu</FormHelperText>
       </FormControl>
       <div style={{backgroundColor:'#171717', display:'inline-block', borderRadius:66, marginTop:10, padding:3, marginLeft:10}}>
-      <IconButton aria-label="add to shopping cart" size="medium" color='primary'>
+      <IconButton aria-label="add to shopping cart" size="medium" color='primary' component={Link} to="/korpa">
         <AddShoppingCartIcon fontSize="large" />
       </IconButton>
       </div>

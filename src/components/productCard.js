@@ -1,4 +1,4 @@
-import * as React from "react";
+import react, { useContext, useEffect } from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -8,10 +8,11 @@ import Typography from "@mui/material/Typography";
 import { Box } from "@mui/material";
 import { Link } from "react-router-dom";
 import { observer } from "mobx-react-lite";
-import categoryStore from "../states/categoryState";
+import { categoryStoreContext } from "../states/categoryState";
 const ProductCard = observer((props) => {
   const categories = props.categories;
-  const categoryStore = React.useContext();
+  const categoryStore = useContext(categoryStoreContext);
+  console.log(categories);
   return (
     <div>
       <Card sx={{ maxWidth: 345, backgroundColor: "#1f1f1f" }}>
@@ -31,6 +32,7 @@ const ProductCard = observer((props) => {
             <Button
               size="small"
               variant="contained"
+              onClick={() => {categoryStore.categories = categories}}
               component={Link}
               to={`/proizvodi/${props.name}`}
               key={props.name}
@@ -43,6 +45,5 @@ const ProductCard = observer((props) => {
     </div>
   );
 });
-
 
 export default ProductCard;

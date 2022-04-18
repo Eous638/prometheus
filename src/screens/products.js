@@ -20,14 +20,15 @@ export default function Products() {
       </Typography>
       <Grid container spacing={3} sx={{ padding: 5 }}></Grid>
       {products.map((product) => (
-        <Grid item xs={12} sm={6} md={4} lg={3}>
+        <Grid item xs={12} sm={6} md={4} lg={3} sx={{marginLeft: 5}}>
           <ProductCard
             name={product.title}
             description={product.description}
             image={product.image}
+            categories={product.category}
             key={product.id}
           />
-        </Grid>
+        </Grid> 
       ))}
     </div>
   );

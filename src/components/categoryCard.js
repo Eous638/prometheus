@@ -1,4 +1,4 @@
-import * as React from "react";
+import react, { useContext, useEffect } from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -8,8 +8,11 @@ import Typography from "@mui/material/Typography";
 import { Box } from "@mui/material";
 import exampleImage from "../images/example.jpg";
 import { Link, useParams } from "react-router-dom";
-
-export default function CategoryCard(props) {
+import { observer } from "mobx-react-lite";
+import { categoryStoreContext } from "../states/categoryState";
+const CategoryCard = observer((props) => {
+  const products = props.products;
+  const categoryStore = useContext(categoryStoreContext);
   let params = useParams();
   return (
     <div>
@@ -33,6 +36,7 @@ export default function CategoryCard(props) {
             <Button
               size="small"
               variant="contained"
+              onClick={() => categoryStore.products = products}
               component={Link}
               to={`/proizvodi/${params.categoryName}/${props.name}`}
               key={props.name}
@@ -44,4 +48,6 @@ export default function CategoryCard(props) {
       </Card>
     </div>
   );
-}
+})
+
+export default CategoryCard;

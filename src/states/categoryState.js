@@ -3,6 +3,7 @@ import { createContext } from "react";
 
 class categoryStore {
   @observable categories = [];
+  @observable products = [];
 }
 
-export const categoryContext = createContext(new categoryStore());
+export const categoryStoreContext = createContext(new categoryStore());
