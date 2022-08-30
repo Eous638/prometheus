@@ -11,7 +11,7 @@ export default function Description() {
   let params = useParams()
   const cartStore = useContext(cartStoreContext)
   const [products, setProducts] = useState([]);
-  const url = 'http://127.0.0.1:8000/api/products/' + params.productName
+  const url = 'http://192.168.0.23:8000/api/products/' + params.productName
   const items = {
       "title": params.productName,
       "price": products.price,

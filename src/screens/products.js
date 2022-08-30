@@ -7,7 +7,7 @@ export default function Products() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios("http://127.0.0.1:8000/api/supercategories/");
+      const result = await axios("http://192.168.0.23:8000/api/supercategories/");
       setProducts(result.data);
     };
     fetchData();

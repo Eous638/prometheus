@@ -6,7 +6,7 @@ import axios from "axios";
 export default function SubCategory() {
   let params = useParams();
   const [products, setProducts] = useState([]);
-  const url = 'http://127.0.0.1:8000/api/categories/' + params.subCategoryName
+  const url = 'http://192.168.0.23:8000/api/categories/' + params.subCategoryName
 
   useEffect(() => {
     const fetchData = async () => {

@@ -6,7 +6,7 @@ import { Grid, Typography } from "@mui/material";
 export default function Category() {
   let params = useParams();
   const [products, setProducts] = useState([]);
-  const url = 'http://127.0.0.1:8000/api/supercategories/' + params.categoryName
+  const url = 'http://192.168.0.23:8000/api/supercategories/' + params.categoryName
 
   useEffect(() => {
     const fetchData = async () => {
