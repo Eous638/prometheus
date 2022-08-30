@@ -7,12 +7,8 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/material";
 import { Link } from "react-router-dom";
-import { observer } from "mobx-react-lite";
-import { categoryStoreContext } from "../states/categoryState";
-const ProductCard = observer((props) => {
-  const categories = props.categories;
-  const categoryStore = useContext(categoryStoreContext);
-  console.log(categories);
+
+const ProductCard = (props) => {
   return (
     <div>
       <Card sx={{ maxWidth: 345, backgroundColor: "#1f1f1f" }}>
@@ -32,9 +28,8 @@ const ProductCard = observer((props) => {
             <Button
               size="small"
               variant="contained"
-              onClick={() => {categoryStore.categories = categories}}
               component={Link}
-              to={`/proizvodi/${props.name}`}
+              to={props.link}
               key={props.name}
             >
               Vise
@@ -44,6 +39,6 @@ const ProductCard = observer((props) => {
       </Card>
     </div>
   );
-});
+};
 
 export default ProductCard;

@@ -1,37 +1,37 @@
 import React, { useEffect, useState} from "react";
 import ProductCard from "../components/productCard";
 import { useParams } from "react-router-dom";
-import axios from "axios";
 import { Grid, Typography } from "@mui/material";
-export default function Category() {
+import axios from "axios";
+export default function SubCategory() {
   let params = useParams();
   const [products, setProducts] = useState([]);
-  const url = 'http://127.0.0.1:8000/api/supercategories/' + params.categoryName
+  const url = 'http://127.0.0.1:8000/api/categories/' + params.subCategoryName
 
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(url);
-      setProducts(result.data.category);
-      console.log(result.data.category)
+      setProducts(result.data.product);
+      console.log(result.data)
     };
     fetchData();
   }, []);
  
   return (
-    <div style={{ justifyContent: "center" }}>
+    <div style={{ justifyContent: "center", alignItems: "center" }}>
       <Typography variant="h4" sx={{ paddingTop: 2 }}>
-        {params.categoryName}
+        {params.subCategoryName}
       </Typography>
       <Grid container spacing={3} sx={{ padding: 5 }}>
       {products.map((product) => (
         <Grid item xs={12} sm={6} md={4} lg={3} style={{paddingLeft: 50}}>
-        <ProductCard
+          <ProductCard
             name={product.title}
             description={product.description}
             image={product.image}
             categories={product.category}
             key={product.id}
-            link={`/proizvodi/${params.categoryName}/${product.title}`}
+            link={`/proizvodi/${params.categoryName}/${params.subCategoryName}/${product.title}`}
           />
         </Grid> 
       ))}
@@ -39,15 +39,3 @@ export default function Category() {
     </div>
   );
 }
-
-/*{products.category.map((product) => (
-        <Grid item xs={12} sm={6} md={4} lg={3} sx={{marginLeft: 5}}>
-          <CategoryCard
-            name={product.title}
-            description={product.description}
-            image={product.image}
-            categories={product.category}
-            key={product.id}
-          />
-        </Grid> 
-      ))}*/

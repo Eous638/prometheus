@@ -10,6 +10,8 @@ import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import { Link } from 'react-router-dom';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { Box } from '@mui/material';
+import logo from '../images/logo.png'
 export default function ButtonAppBar() {
 
   const [anchorEl2, setAnchorEl2] = React.useState(null);
@@ -77,9 +79,15 @@ const drawerOpen = () =>
             
           </MuiDrawer>
           <Link to="/">
-          <Typography variant="h5" component="div" sx={{ flexGrow: 1, padding: 2 }}>
-            Prometej
-          </Typography>
+          <Box
+            component="img"
+            sx={{
+            height: 54,
+            mt:1
+            }}
+            alt="Your logo."
+            src={logo}
+        />
           </Link>
           <IconButton component={Link} to="/korpa">
             <ShoppingCartIcon  />

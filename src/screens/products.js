@@ -18,18 +18,19 @@ export default function Products() {
       <Typography variant="h4" sx={{ paddingTop: 2, color: "#ba0000" }}>
         Nasi proizvodi
       </Typography>
-      <Grid container spacing={3} sx={{ padding: 5 }}></Grid>
+      <Grid container spacing={3} sx={{ padding: 5 }}>
       {products.map((product) => (
-        <Grid item xs={12} sm={6} md={4} lg={3} sx={{marginLeft: 5}}>
-          <ProductCard
+        <Grid item xs={12} sm={6} md={4} lg={3} style={{paddingLeft: 50}}>
+        <ProductCard
             name={product.title}
             description={product.description}
             image={product.image}
             categories={product.category}
             key={product.id}
+            link={`/proizvodi/${product.title}`}
           />
         </Grid> 
-      ))}
+      ))}</Grid>
     </div>
   );
 }
